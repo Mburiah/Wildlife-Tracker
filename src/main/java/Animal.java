@@ -26,10 +26,10 @@ public class Animal {
 
     public void add(){
         try(Connection conn = DB.sql2o.open()){
-            conn.createQuery("insert into animals(animal_id, animal_age, animal_name ) VALUES(:animal_id, :animal_name, :animal_age) ")
-                    .addParameter("animal_id", "this.animal_id")
-                    .addParameter("animal_age", "this.animal_age")
-                    .addParameter("animal_name", "this.animal_name")
+            conn.createQuery("insert into animals(animal_id, animal_age, animal_name ) VALUES(:animal_id, :animal_age, :animal_name ) ")
+                    .addParameter("animal_id", this.animal_id)
+                    .addParameter("animal_age", this.animal_age)
+                    .addParameter("animal_name", this.animal_name)
                     .executeUpdate();
         }
     }

@@ -36,7 +36,7 @@ public class App {
         post("/animal/add", (request, response) ->{
             String animal_name = request.queryParams("animal_name");
             int animal_id = Integer.parseInt(request.queryParams("animal_id"));
-            int animal_age = Integer.parseInt(request.queryParams("animal-age"));
+            int animal_age = Integer.parseInt(request.queryParams("animal_age"));
             Animal newAnimal = new Animal(animal_id, animal_age, animal_name);
             newAnimal.add();
             response.redirect("/");
