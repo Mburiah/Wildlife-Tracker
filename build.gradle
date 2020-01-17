@@ -3,9 +3,9 @@ plugins {
     id 'application'
 }
 
-group 'com.watitwa'
+group 'com.shedroid'
 version '1.0-SNAPSHOT'
-applicationName = 'wildlife-tracker'
+applicationName = 'wild-track'
 mainClassName = 'App'
 
 sourceCompatibility = 1.8

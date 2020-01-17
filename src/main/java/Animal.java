@@ -35,7 +35,7 @@ public class Animal {
     }
     public static List <Animal> getAll(){
         try (Connection conn = DB.sql2o.open()){
-            return conn.createQuery("select *from animals").executeAndFetch(Animal.class);
+            return conn.createQuery("select * from animals").executeAndFetch(Animal.class);
         }
     }
 }
