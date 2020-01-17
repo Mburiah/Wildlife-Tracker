@@ -30,8 +30,8 @@ public class App {
 
         get("/animals", (request, response) -> new ModelAndView(model, "animals.hbs"), new HandlebarsTemplateEngine());
         get("/sightings", ((request, response) -> new ModelAndView(model, "sightings.hbs")), new HandlebarsTemplateEngine());
-        get("animal/new", (request, response) -> new ModelAndView(model, "animals.hbs"), new HandlebarsTemplateEngine());
-        get("sightings/new", ((request, response) -> new ModelAndView(model, "sightings.hbs")), new HandlebarsTemplateEngine());
+        get("animal/new", (request, response) -> new ModelAndView(model, "animal.hbs"), new HandlebarsTemplateEngine());
+        get("sightings/new", ((request, response) -> new ModelAndView(model, "sighting.hbs")), new HandlebarsTemplateEngine());
 
         post("/animal/add", (request, response) ->{
             String animal_name = request.queryParams("animal_name");
