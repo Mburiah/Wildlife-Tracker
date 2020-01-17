@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.watitwa'
+version '1.0-SNAPSHOT'
+applicationName = 'wildlife-tracker'
+mainClassName = 'App'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+    compile "com.sparkjava:spark-core:2.8.0"
+    compile "com.sparkjava:spark-template-handlebars:2.5.5"
+    compile 'org.slf4j:slf4j-simple:1.7.21'
+    compile group: 'org.sql2o', name: 'sql2o', version: '1.5.4'
+    compile group: 'org.postgresql', name: 'postgresql', version: "9.4-1201-jdbc41"
+}
+
+test {
+    useJUnitPlatform()
+}
+defaultTasks = ['clean']
+task stage(dependsOn: ['clean', 'installDist'])

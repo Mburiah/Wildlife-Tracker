@@ -1,0 +1,25 @@
+{{#partial "title"}}Rangers{{/partial}}
+
+{{#partial "content"}}
+    <div class="row">
+        <div class="col">
+            <h1 class="display-4">Animals</h1>
+            {{#if animals}}
+                {{#each animals}}
+                    <div class="alert alert-info">
+                        <p><strong>Name:</strong> {{animal_name}}</p>
+                        <p><strong>Age:</strong> {{animal_age}}</p>
+                        <p><strong>ID:</strong> {{animal_id}}</p>
+                    </div>
+                {{/each}}
+            {{else}}
+                <div class="alert alert-danger">
+                    No Animals Added
+                </div>
+                <a href="/animal/new" class="btn btn-success">Add new sighted animal</a>
+            {{/if}}
+        </div>
+    </div>
+{{/partial}}
+
+{{> layout.hbs}}

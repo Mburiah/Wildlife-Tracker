@@ -1,0 +1,31 @@
+{{#partial "title"}}Sighting{{/partial}}
+
+{{#partial "content"}}
+    <div class="row">
+        <div class="col pt-2">
+            <h1 class="display-4">New Sighting</h1>
+            <form action="/sighting/add" method="post">
+                <div class="form-group">
+                    <label for="name">Select an animal from records</label>
+                    <select class="form-control form-control-sm" name="animal_name">
+                        {{#each animals}}
+                            <option  value="{{animal_name}}">{{animal_name}} ID: {{animal_id}}</option>
+                        {{/each}}
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="ranger_name" placeholder="Ranger Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="location" placeholder="Location">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{{/partial}}
+
+{{> layout.hbs}}
