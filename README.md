@@ -4,8 +4,10 @@
 Mburiah
 
 ## Description
-This is a web app 
+This is an application to track wildlife in Douglas fir forest for a case study on whether the forest authority should allow deforestation or not. This application allows rangers to track wildlife sightings in the area.
 
+ 
+[![codebeat badge](https://codebeat.co/badges/f2e546bf-751a-41f7-b9cd-8fe4bbca4067)](https://codebeat.co/projects/github-com-mburiah-wildlife-tracker-master)
 ## Functionality
 
  | Input | Description| Output |
