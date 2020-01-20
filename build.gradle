@@ -23,8 +23,8 @@ dependencies {
     compile group: 'org.postgresql', name: 'postgresql', version: "9.4-1201-jdbc41"
 }
 
-test {
-    useJUnitPlatform()
-}
+//test {
+//    useJUnitPlatform()
+//}
 defaultTasks = ['clean']
 task stage(dependsOn: ['clean', 'installDist'])
