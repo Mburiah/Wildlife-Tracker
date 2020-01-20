@@ -18,7 +18,7 @@ public class App {
         }
         Spark.port(port);
 
-        staticFiles.location("/public");
+        staticFileLocation("/public");
         Map<String, Object> model = new HashMap<>();
         get("/", ((request, response) -> {
             List<Animal> animals = Animal.getAll();
