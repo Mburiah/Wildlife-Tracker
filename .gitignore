@@ -32,7 +32,7 @@ ehthumbs.db
 Thumbs.db
 # Java and Gradle #
 ############
-build/
+#build/
 .gradle/
 out/
 out
